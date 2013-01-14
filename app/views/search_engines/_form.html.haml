@@ -1,0 +1,24 @@
+.control-group
+  = f.label :name, :class => 'control-label'
+  .controls
+    = f.text_field :name
+.control-group
+  = f.label :url, :class => 'control-label'
+  .controls
+    = f.text_field :url, :class => 'input-url'
+.control-group
+  = f.label :country, :class => 'control-label'
+  .controls
+    = f.text_field :country
+.control-group
+  = f.label :icon, :class => 'control-label'
+  .controls
+    = f.file_field :icon, :class => 'input-xlarge'
+
+.control-group
+  = f.label :icon, :class => 'control-label'
+  .controls
+    = f.text_field :remote_icon_url, :class => 'input-xlarge'
+
+= f.hidden_field :revision_id
+

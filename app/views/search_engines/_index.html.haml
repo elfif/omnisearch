@@ -1,0 +1,20 @@
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Url
+      %th Country
+      %th Icon
+      %th
+  - @revision.search_engines.all.each do |search_engine|
+    %tbody
+      %tr
+        %td= search_engine.name
+        %td= search_engine.url
+        %td= search_engine.country
+        %td= image_tag search_engine.icon_url(:ldpi)
+        %td
+          = link_to revision_search_engine_path(@revision, search_engine), method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'btn btn-mini btn-danger' do
+            %i.icon-white.icon-remove
+            Supprimer

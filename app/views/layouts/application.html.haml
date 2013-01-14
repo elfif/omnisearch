@@ -1,0 +1,21 @@
+%html
+  %head
+    %title OmniSearch Admin
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand{:href => "#"} OmniSearchAdmin
+
+    .container
+      - flash.each do |name, msg|
+        %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+          %a.close{"data-dismiss" => "alert"} x
+          = msg
+      = yield
+    = yield :scripts
+    #myModal.modal.hide.fade.in
+    #myModalLarge.modal-large.hide.fade.in

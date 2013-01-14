@@ -1,0 +1,24 @@
+@import "bootstrap";
+
+body { padding-top: 60px; }
+
+@import "bootstrap-responsive";
+
+.navbar .brand {
+  color: #FAFFB8;
+}
+
+.modal {display:none}
+
+input {
+  height:25px;
+}
+
+
+.input-url {
+  width: 360px;
+}
+
+/* footer-form pour tirer un trait entre les forms et les actions */
+.form-footer {margin-top: 45px; padding: 20px 0 20px; border-top: 1px solid #e5e5e5;}
+

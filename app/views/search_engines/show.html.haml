@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @search_engine.name
+%p
+  %b Url:
+  = @search_engine.url
+%p
+  %b Country:
+  = @search_engine.country
+%p
+  %b Revision:
+  = @search_engine.revision_id
+
+= link_to 'Edit', edit_search_engine_path(@search_engine)
+\|
+= link_to 'Back', search_engines_path

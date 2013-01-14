@@ -1,0 +1,14 @@
+= form_for [@revision, @search_engine], :html => {:class =>'form-horizontal', :multipart => true} do |f|
+  .modal-header
+    %h3
+      Nouveau Site
+  .modal-body
+    = render 'form', :f => f
+  .modal-footer
+    = button_tag :class =>'btn btn-primary', :type => 'submit' do
+      %i.icon-ok.icon-white
+      Enregistrer
+    = link_to @revision, :class => 'btn btn-warning' do
+      %i.icon-remove.icon-white
+      Annuler
+

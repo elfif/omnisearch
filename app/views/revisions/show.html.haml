@@ -1,0 +1,26 @@
+%p#notice= notice
+
+%p
+  %b Nbitem:
+  = @revision.nbItem
+%p
+  %b Published:
+  = @revision.published
+
+= link_to new_revision_search_engine_path(@revision), :class => 'btn btn-info' do
+  %i.icon-file.icon-white
+  Ajouter un site
+
+%br
+%br
+
+#dvSeList.well
+  - if @revision.search_engines.all.count > 0
+    = render 'search_engines/index'
+  - else
+    %p
+      Aucun site enregistre pour l'instant
+
+= link_to 'Edit', edit_revision_path(@revision)
+\|
+= link_to 'Back', revisions_path
